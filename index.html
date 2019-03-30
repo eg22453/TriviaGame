@@ -15,9 +15,12 @@
 
     <h1>TRIVIAL TRIVIA</h1>
 
-    <h2>countdown : <span id="countdown"></span></h2>
+    <h2>Countdown : <span id="countdown"></span></h2>
 
     <br><br>
+
+
+    <div id = "quizbox"><!--container for all of the questions/answers-->
     <p>What is the best band of all time??? </p>
     <form>
         <label class="radio-inline">
@@ -43,6 +46,7 @@
             <input type="radio" name="optradio">Strawberry
         </label>
     </form>
+    </div>
 
 
 
@@ -55,7 +59,7 @@
         // but it only ran once, when I removed the () it decrememented by a 1 second countdown like expected
 
         function startcountdown() {
-            if (timeremaining === 0) {
+            if (timeremaining === -1) {
                 //go to the next page
             } else {
                 $("#countdown").text(timeremaining);
