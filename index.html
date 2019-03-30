@@ -1,0 +1,70 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Trivia</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script type="text/javascript"></script>
+
+</head>
+
+<body>
+
+    <h1>TRIVIAL TRIVIA</h1>
+
+    <h2>countdown : <span id="countdown"></span></h2>
+
+    <br><br>
+    <p>What is the best band of all time??? </p>
+    <form>
+        <label class="radio-inline">
+            <input type="radio" name="optradio">Led Zepellin
+             <!--buttons must have the same name attribute in order for only 1 to be selected at a time within a single form-->
+        </label> 
+        <label class="radio-inline">
+            <input type="radio" name="optradio"> The Beatles
+        </label>
+        <label class="radio-inline">
+            <input type="radio" name="optradio">Black Sabbath
+        </label>
+    </form>
+<p>What is the best ice cream flavor??</p>
+    <form>
+        <label class="radio-inline">
+            <input type="radio" name="optradio">Chocolate
+        </label>
+        <label class="radio-inline">
+            <input type="radio" name="optradio">Vanilla
+        </label>
+        <label class="radio-inline">
+            <input type="radio" name="optradio">Strawberry
+        </label>
+    </form>
+
+
+
+    <script type="text/javascript">
+        let timeremaining = 30 //should this be in seconds?
+
+        setInterval(startcountdown, 1000); // Run this code at every interval
+
+        //IMPORTANT in the above line of code i thought startcountdown() was correct
+        // but it only ran once, when I removed the () it decrememented by a 1 second countdown like expected
+
+        function startcountdown() {
+            if (timeremaining === 0) {
+                //go to the next page
+            } else {
+                $("#countdown").text(timeremaining);
+                timeremaining--;
+                console.log(timeremaining)
+            }
+
+        }
+    </script>
+</body>
+
+</html>
