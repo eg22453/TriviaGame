@@ -22,26 +22,14 @@
 
     <div id="quizbox">
         <!--container for all of the questions/answers-->
-        <p>What is the best band of all time??? </p>
-        <form>
-            <label class="radio-inline">
-                <input type="radio" name="optradio">Led Zepellin
-                <!--buttons must have the same name attribute in order for only 1 to be selected at a time within a single form-->
-            </label>
-            <label class="radio-inline">
-                <input type="radio" name="optradio"> The Beatles
-            </label>
-            <label class="radio-inline">
-                <input type="radio" name="optradio">Black Sabbath
-            </label>
-        </form>
+
         <p>When did the first world war start?</p>
         <form>
             <label class="radio-inline">
                 <input type="radio" name="optradio">1923
             </label>
-            <label class="radio-inline">
-                <input type="radio" name="optradio">1914
+            <label class="radio-inline correct">
+                <input type="radio" class="correct" id="correct" name="optradio">1914
             </label>
             <label class="radio-inline">
                 <input type="radio" name="optradio">1931
@@ -49,8 +37,8 @@
         </form>
         <p>Where is the smallest bone in the body?</p>
         <form>
-            <label class="radio-inline">
-                <input type="radio" name="optradio">ear
+            <label class="radio-inline correct">
+                <input type="radio" class="correct" id="correct" name="optradio">ear
             </label>
             <label class="radio-inline">
                 <input type="radio" name="optradio">pinky toe
@@ -59,13 +47,15 @@
                 <input type="radio" name="optradio">hand
             </label>
         </form>
+
+
         <p>How many dots on 2 dice total?</p>
         <form>
             <label class="radio-inline">
                 <input type="radio" name="optradio"> 43
             </label>
-            <label class="radio-inline">
-                <input type="radio" name="optradio">42 <!--correct-->
+            <label class="radio-inline correct">
+                <input type="radio" class="correct" id="correct" name="optradio">42
             </label>
             <label class="radio-inline">
                 <input type="radio" name="optradio">46
@@ -74,7 +64,7 @@
         <p>Which horoscope sign depicts a crab?</p>
         <form>
             <label class="radio-inline">
-                <input type="radio" name="optradio">Cancer
+                <input type="radio" class="correct" id="correct" name="optradio">Cancer
             </label>
             <label class="radio-inline">
                 <input type="radio" name="optradio">Aries
@@ -83,13 +73,15 @@
                 <input type="radio" name="optradio">Pisces
             </label>
         </form>
+
+        <!--
         <p>When did the american civil war end?</p>
         <form>
             <label class="radio-inline">
                 <input type="radio" name="optradio">1876
             </label>
             <label class="radio-inline">
-                <input type="radio" name="optradio">1865 <!--correct-->
+                <input type="radio" name="optradio">1865 
             </label>
             <label class="radio-inline">
                 <input type="radio" name="optradio">1859
@@ -116,7 +108,7 @@
                 <input type="radio" name="optradio">Arctic
             </label>
             <label class="radio-inline">
-                <input type="radio" name="optradio">Pacific <!--correct-->
+                <input type="radio" name="optradio">Pacific 
             </label>
         </form>
         <p>Which actor plays Thor in the marvel movies?</p>
@@ -155,22 +147,37 @@
                 <input type="radio" name="optradio">Squirtle
             </label>
         </form>
-       
+
+    -->
+
     </div>
 
 
 
     <script type="text/javascript">
-        let timeremaining = 30 //should this be in seconds?
+        let timeremaining = 10 //should this be in seconds?
+        let rightanswers = 0;
+        let wronganswers = 4;
 
-        setInterval(startcountdown, 1000); // Run this code at every interval
+        var Interval = setInterval(startcountdown, 1000);
+         // Run this code at every interval
+        
 
         //IMPORTANT in the above line of code i thought startcountdown() was correct
         // but it only ran once, when I removed the () it decrememented by a 1 second countdown like expected
 
         function startcountdown() {
-            if (timeremaining === -1) {
-                //go to the next page
+            if (timeremaining === 0) {
+                $("input:checked").each(function () {
+                    if ($(this).hasClass("correct")) {
+                        rightanswers++;
+                        wronganswers--;
+                    }
+                })
+                console.log(rightanswers + " right answers")
+                console.log(wronganswers + " wrong answers")
+                clearInterval(Interval)
+                
             } else {
                 $("#countdown").text(timeremaining);
                 timeremaining--;
@@ -178,11 +185,6 @@
             }
 
         }
-
-
-
-
-        
     </script>
 </body>
 
