@@ -1,6 +1,6 @@
 let timeremaining = 10 //should this be in seconds?
 let rightanswers = 0;
-let wronganswers = 4;
+let wronganswers = 10;
 
 var Interval = setInterval(startcountdown, 1000);
  // Run this code at every interval
