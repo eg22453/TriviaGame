@@ -10,3 +10,12 @@ body{
     padding: 2%;
     font-weight:bold;
 }
+
+#showresults{
+    display: none;
+    background-color: antiquewhite; 
+    margin-left: 25%;
+    margin-right: 25%;
+    padding: 2%;
+    font-weight:bold;
+}
