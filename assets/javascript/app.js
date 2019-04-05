@@ -14,7 +14,7 @@ var Interval;
 $("#startbutton").click(function () {
     $("#startbutton").hide()
     Interval = setInterval(startcountdown, 1000);
-    
+    $("#quizbox").show()
 
 })
 function startcountdown() {
