@@ -1,4 +1,4 @@
-let timeremaining = 10; //should this be in seconds?
+let timeremaining = 30; //should this be in seconds?
 let rightanswers = 0;
 let wronganswers = 10;
 var Interval;
