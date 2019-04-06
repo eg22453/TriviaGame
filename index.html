@@ -1,0 +1,162 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Trivia</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
+    <script src="https://code.jquery.com/jquery.js"></script>
+</head>
+
+<body>
+    <img src ="assets/images/trivialogo.jpg" height = "100 px" width ="350px">
+
+    <h2>Countdown : <span id="countdown"></span></h2>
+
+    <br><br>
+
+
+    <div id="quizbox">
+        <!--container for all of the questions/answers-->
+
+        <p>When did the first world war start?</p>
+        <form>
+            <label class="radio-inline">
+                <input type="radio" name="optradio">1923
+            </label>
+            <label class="radio-inline correct">
+                <input type="radio" class="correct" id="correct" name="optradio">1914
+            </label>
+            <label class="radio-inline">
+                <input type="radio" name="optradio">1931
+            </label>
+        </form>
+        <p>Where is the smallest bone in the body?</p>
+        <form>
+            <label class="radio-inline correct">
+                <input type="radio" class="correct" id="correct" name="optradio">ear
+            </label>
+            <label class="radio-inline">
+                <input type="radio" name="optradio">pinky toe
+            </label>
+            <label class="radio-inline">
+                <input type="radio" name="optradio">hand
+            </label>
+        </form>
+
+
+        <p>How many dots on 2 dice total?</p>
+        <form>
+            <label class="radio-inline">
+                <input type="radio" name="optradio"> 43
+            </label>
+            <label class="radio-inline correct">
+                <input type="radio" class="correct" id="correct" name="optradio">42
+            </label>
+            <label class="radio-inline">
+                <input type="radio" name="optradio">46
+            </label>
+        </form>
+        <p>Which horoscope sign depicts a crab?</p>
+        <form>
+            <label class="radio-inline">
+                <input type="radio" class="correct" id="correct" name="optradio">Cancer
+            </label>
+            <label class="radio-inline">
+                <input type="radio" name="optradio">Aries
+            </label>
+            <label class="radio-inline">
+                <input type="radio" name="optradio">Pisces
+            </label>
+        </form>
+
+
+        <p>When did the american civil war end?</p>
+        <form>
+            <label class="radio-inline">
+                <input type="radio" name="optradio">1876
+            </label>
+            <label class="radio-inline">
+                <input type="radio" class="correct" name="optradio">1865
+            </label>
+            <label class="radio-inline">
+                <input type="radio" name="optradio">1859
+            </label>
+        </form>
+        <p>Which planet is nearest the sun?</p>
+        <form>
+            <label class="radio-inline">
+                <input type="radio" name="optradio">Mars
+            </label>
+            <label class="radio-inline">
+                <input type="radio" class="correct" name="optradio">Mercury
+            </label>
+            <label class="radio-inline">
+                <input type="radio" name="optradio">Earth
+            </label>
+        </form>
+        <p>Which is the largest ocean?</p>
+        <form>
+            <label class="radio-inline">
+                <input type="radio" name="optradio">Atlantic
+            </label>
+            <label class="radio-inline">
+                <input type="radio" name="optradio">Arctic
+            </label>
+            <label class="radio-inline">
+                <input type="radio" class="correct" name="optradio">Pacific
+            </label>
+        </form>
+        <p>Which actor plays Thor in the marvel movies?</p>
+        <form>
+            <label class="radio-inline">
+                <input type="radio" name="optradio">Chris Evans
+            </label>
+            <label class="radio-inline">
+                <input type="radio" class="correct" name="optradio">Chris Hemsworth
+            </label>
+            <label class="radio-inline">
+                <input type="radio" name="optradio">Chris Pratt
+            </label>
+        </form>
+        <p>What colors make purple?</p>
+        <form>
+            <label class="radio-inline">
+                <input type="radio" name="optradio">Red/black
+            </label>
+            <label class="radio-inline">
+                <input type="radio" name="optradio">Red/green
+            </label>
+            <label class="radio-inline">
+                <input type="radio" class="correct" name="optradio">Red/blue
+            </label>
+        </form>
+        <p>This pokemon is a tiny mouse that generates electricity</p>
+        <form>
+            <label class="radio-inline">
+                <input type="radio" name="optradio">Charizard
+            </label>
+            <label class="radio-inline">
+                <input type="radio" class="correct" name="optradio">Pikachu
+            </label>
+            <label class="radio-inline">
+                <input type="radio" name="optradio">Squirtle
+            </label>
+        </form>
+
+
+
+    </div>
+    <div id ="showresults">
+        <h1>Answers Correct: <span id = "answerscorrect"></span></h1>
+        <h1>Answers Wrong: <span id = "answerswrong"></span></h1>
+    </div>
+
+    <button type="button" id ="startbutton">Start Quiz</button>
+
+
+    <script type="text/javascript" src="assets/javascript/app.js"></script> <!--Link external javascript-->
+</body>
+
+</html>

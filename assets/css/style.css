@@ -1,0 +1,39 @@
+body{
+    text-align: center;
+    background-color: rgba(46, 172, 140, 0.534);
+}
+
+#quizbox{
+    background-color: antiquewhite;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-bottom: 25%;
+    padding: 2%;
+    font-weight:bold;
+    display: none;
+    border: thick;
+    border-width: 3px;
+    border-color: black;
+    border-style: groove;
+}
+
+#showresults{
+    display: none;
+    background-color: antiquewhite; 
+    margin-left: 25%;
+    margin-right: 25%;
+    padding: 2%;
+    font-weight:bold;
+}
+
+button{
+    width:200px;
+    height:70px;
+    font-size: 20px;
+
+}
+
+#TITLE{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+    
+}
